@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.droidmentor.locationhelper.MyLocationUsingHelper">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/get_location"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/large_text"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:text="@string/quotedesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        card_view:elevation="4dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/header"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:minHeight="120dp"
+            android:id="@+id/rlAddress"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:text=""
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/tvEmpty"
+                android:text="Tap pick location to get your address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+            <View
+                android:layout_below="@+id/rlAddress"
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#E1E1E1"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlPickLocation"
+                android:layout_below="@id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/items_inbetween"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_pick"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/textView"
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/items_inbetween"
+                        android:text="PICK LOCATION"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:enabled="false"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        style="@style/proceedButtonStyle"
+        android:id="@+id/btnLocation"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="PROCEED" />
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LocationHelper</string>
+    <string name="quotedesc">Welcome! Where should we deliver to?</string>
+</resources>
